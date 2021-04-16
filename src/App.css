@@ -11,7 +11,7 @@
 body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url(media/Backgroundcollage.png);
   background-position-x: center;
-  background-size: auto;
+  background-size: cover;
   color: #000;
 }
 

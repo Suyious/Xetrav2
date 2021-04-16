@@ -6,13 +6,12 @@
    480-less    - phone landscape & smaller
 --------------------------------------------*/
 
-@media all and (max-width: 1700px){
-  
-  .Hero_subtext button{
+@media all and (max-width: 1700px) {
+  .Hero_subtext button {
     padding: 1em 4em;
   }
 
-  .Hero_subtext .button-content h3{
+  .Hero_subtext .button-content h3 {
     font-size: 1.6em;
     text-align: center;
   }
@@ -22,48 +21,54 @@
     width: 30px;
     height: auto;
   }
-
 }
 
-@media all and (max-width: 1500px){
-  .Hero_subtext button{
+@media all and (max-width: 1500px) {
+  body {
+    background-size: auto;
+  }
+
+  .Hero_subtext button {
     padding: 1em 3em;
   }
 
-  .Hero_subtext .button-content h3{
+  .Hero_subtext .button-content h3 {
     font-size: 1.4em;
   }
-} 
+}
 
 @media all and (max-width: 1280px) {
-
-
-  .Hero_subtext h2{
+  .Hero_subtext h2 {
     font-size: 2em;
   }
 
-  .Hero_subtext button{
+  .Hero_subtext button {
     padding: 1em 3em;
   }
 
-  .Hero_subtext .button-content h3{
+  .Hero_subtext .button-content h3 {
     font-size: 1.3em;
   }
+}
 
- }
-
- 
-@media all and (max-width: 480px) { 
-
-  .Trending h1,.Cart h1, .SignUp{
+@media all and (max-width: 480px) {
+  .Trending h1,
+  .Cart h1,
+  .SignUp {
     display: none;
   }
 
-  .Cart{
+  .Trending {
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 3em;
+  }
+
+  .Cart {
     margin-right: 1.5em;
   }
 
-  .Hero_subtext button{
+  .Hero_subtext button {
     padding: 1em 2em;
   }
 
@@ -72,17 +77,16 @@
     width: 30px;
     height: auto;
   }
-  
-  .Hero_subtext .button-content h3{
+
+  .Hero_subtext .button-content h3 {
     font-size: 1.3em;
   }
 
   .Hero_subtext h3 span {
     color: #e20000;
   }
-  
-  .Option-box{
+
+  .Option-box {
     width: 100%;
   }
-
 }
