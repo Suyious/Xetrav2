@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Xetrav2/static/css/main.6080cc89.chunk.css",
+    "main.css": "/Xetrav2/static/css/main.d5035249.chunk.css",
     "main.js": "/Xetrav2/static/js/main.1cc3c792.chunk.js",
     "main.js.map": "/Xetrav2/static/js/main.1cc3c792.chunk.js.map",
     "runtime-main.js": "/Xetrav2/static/js/runtime-main.9af555b1.js",
@@ -10,14 +10,14 @@
     "static/js/3.813ae17f.chunk.js": "/Xetrav2/static/js/3.813ae17f.chunk.js",
     "static/js/3.813ae17f.chunk.js.map": "/Xetrav2/static/js/3.813ae17f.chunk.js.map",
     "index.html": "/Xetrav2/index.html",
-    "static/css/main.6080cc89.chunk.css.map": "/Xetrav2/static/css/main.6080cc89.chunk.css.map",
+    "static/css/main.d5035249.chunk.css.map": "/Xetrav2/static/css/main.d5035249.chunk.css.map",
     "static/js/2.0be989d9.chunk.js.LICENSE.txt": "/Xetrav2/static/js/2.0be989d9.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Xetrav2/static/media/Backgroundcollage.a788170d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9af555b1.js",
     "static/js/2.0be989d9.chunk.js",
-    "static/css/main.6080cc89.chunk.css",
+    "static/css/main.d5035249.chunk.css",
     "static/js/main.1cc3c792.chunk.js"
   ]
 }
