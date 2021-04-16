@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import "./queries.css"
-import Background from "./Background";
 import Navigation from "./Navigation"
 
 function App() {
@@ -14,13 +13,9 @@ function App() {
 
   return (
     <div className="App">
-		  <Navigation handleScroll={handleScroll} scrolled={scrolled}/>
+		  <Navigation/>
       <div className="Hero boxwidth">
-        <div className={`Hero_title ${scrolled?"small_title":"big_title"}`} >
-          <h1>Streets<span>X</span></h1>
-          <h1 className="Heropar">Fashion</h1>
-        </div>
-        <div className={`Hero_subtext ${scrolled?"appear":"vanish"}`}>
+        <div className={`Hero_subtext`}>
           <h2>Enter the ultimate shopping experience.</h2>
           <div className="Option-box">
             <button>
@@ -31,14 +26,8 @@ function App() {
                 </svg>
               </div>
             </button>
-            <h3>Or use email to <span>Sign Up</span></h3>
+            <h3 className="button_sub">Or use email to <span>Sign Up</span></h3>
           </div>
-        </div>
-      </div>
-      <Background scrolled={scrolled}/>
-      <div className="scroller">
-        <div className="overlay" onClick={handleScroll}>
-            <svg className={`chevron ${!scrolled && "rotate"}`} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg>
         </div>
       </div>
     </div>
