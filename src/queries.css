@@ -52,6 +52,13 @@
 }
 
 @media all and (max-width: 480px) {
+
+  body{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url(media/Backgroundcollage2.png);
+    background-position-x: center;
+    background-size: auto;
+  }
+
   .Trending h1,
   .Cart h1,
   .SignUp {
