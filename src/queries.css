@@ -71,6 +71,16 @@
     margin-right: 3em;
   }
 
+  .Hero_subtext{
+    margin-top: 50vw;
+  }
+
+  .Hero_subtext h2 {
+    font-size: 3.5em;
+    margin-left: 0.5em;
+    text-align: left;
+  }
+
   .Cart {
     margin-right: 1.5em;
   }
