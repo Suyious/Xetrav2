@@ -9,6 +9,7 @@
 }
 
 body {
+  background: #000;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url(media/Backgroundcollage.png);
   background-position-x: center;
   background-size: cover;
@@ -172,6 +173,19 @@ body {
   position: fixed;
   top: 0;
   z-index: 1;
+  animation: slide 500ms ease-in;
+}
+
+@keyframes slide {
+  10% {
+    transform: translateY(-5em);
+    opacity: 0;
+  } 50% {
+    opacity: 0.5;
+  } 100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
 }
 
 .Nav {
@@ -250,12 +264,23 @@ body {
   color: #fff;
   font-size: 4em;
   text-align: center;
+  animation: fadewithtransform 500ms ease-in;
+}
+@keyframes fadewithtransform{
+  from{
+    transform: translateX(-2em);
+    opacity: 0;
+  } to {
+    transform: translateX(0);
+    opacity: 1 ;
+  }
 }
 
 .Hero_subtext button h3 {
   font-family: Poppins;
   font-size: 2em;
 }
+
 
 .Hero_subtext h3 {
   font-family: Poppins;
@@ -278,6 +303,15 @@ body {
   background: #fff;
   cursor: pointer;
   min-width: 22em;
+  animation: fade 500ms ease;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+  } to {
+    opacity: 1 ;
+  }
 }
 
 .Hero_subtext .button-content {

@@ -1,15 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
 import "./queries.css"
 import Navigation from "./Navigation"
 
 function App() {
-
-  const [scrolled, setScrolled ] = useState(false);
-
-  const handleScroll=()=>{
-    setScrolled(!scrolled);
-  }
 
   return (
     <div className="App">
