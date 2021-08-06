@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900;200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900;200;300&display=swap");
 
 * {
   margin: 0;
@@ -18,6 +18,14 @@ body {
 
 .App{
   overflow: hidden;
+}
+
+.ClickToExit{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 }
 
 
@@ -93,9 +101,7 @@ body {
   cursor: pointer;
 }
 
-/* .hamburger:hover{
-	background: #1f21231e;
-} */
+
 
 .Trending,
 .Cart {
@@ -105,7 +111,7 @@ body {
 
 .Trending h1,
 .Cart h1 {
-  font-family: "Poppins";
+  font-family: Poppins, sans-serif;
   font-weight: 300;
   padding: 0 1em;
   color: #fff;
@@ -117,14 +123,15 @@ body {
 }
 
 .Trending svg path,
-.Cart svg path{
+.Cart svg path,
+.Cart_svg svg path {
   fill: #fff;
 }
 
 .SignUp button {
   outline: none;
   border: none;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1em;
   padding: 0.5em 2.5em;
   margin: 0 1em;
@@ -137,7 +144,7 @@ body {
 }
 
 .Cart {
-  margin: 0.3em 1m;
+  margin: 0.3em 1em;
 }
 
 .Cart_svg svg {
@@ -145,6 +152,7 @@ body {
   width: 35px;
   height: auto;
 }
+
 
 
 .navwidth {
@@ -161,7 +169,7 @@ body {
 .Right {
   display: flex;
   align-items: center;
-  z-index: 1;
+/* z-index: 1; */
   transition: all 500ms ease;
 }
 
@@ -196,17 +204,20 @@ body {
 }
 
 /* Sidebar */
+
+
 .sidebar,
 .blur {
   position: absolute;
   top: 7px;
-  width: 0;
+  width: 25em;
   max-width: 95vw;
   height: 98.5vh;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(22px);
   border-radius: 20px;
+  padding: 2em 0.5em;
 }
 
 .Leftbar .sidebar,
@@ -219,24 +230,63 @@ body {
   right: 7px;
 }
 
-.sidebar_show,
-.blur_show {
-  width: 25em;
-  transition: width 500ms ease;
+.Rightbar .topbar{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+  padding: 0 2em;
+}
+
+.Leftbar .sidebar_hide,
+.Leftbar .blur_hide{
+  transform: translateX(-50em);
+  transition: transform 500ms ease;
+}
+
+.Leftbar .sidebar_show,
+.Leftbar .blur_show{
+  transform: translateX(0);
+  animation: LeftSlideIn 500ms ease;
+}
+
+.Rightbar .sidebar_hide,
+.Rightbar .blur_hide{
+  transform: translateX(50em);
+  transition: transform 500ms ease;
+}
+
+.Rightbar .sidebar_show,
+.Rightbar .blur_show{
+  animation: RightSlideIn 500ms ease;
+}
+
+
+
+@keyframes RightSlideIn {
+  from{
+    transform: translateX(50em);
+  } to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes LeftSlideIn {
+  from{
+    transform: translateX(-50em);
+  } to {
+    transform: translateX(0);
+  }
 }
 
 .sidebar ul {
   list-style: none;
-  margin: 5em 0;
 }
 
 .sidebar ul li{
-  margin: 0.3em;
   border-radius: 10px;
-  padding: 1em 2em;
   font-size: 1.5em;
   text-decoration: none;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   color: #fff;
   cursor: pointer;
 }
@@ -246,26 +296,82 @@ body {
   padding: 1em 2em;
   font-size: 1.5em;
   color: #fff;
-  font-family: Poppins;
-  width: 19em;
+  font-family: Poppins, sans-serif;
 }
 
 .sidebar ul li:hover {
-  background: #1f21236c;
+  background: #C4C4C466;
+  /* background: #287cd16c; */
 }
 
+.Rightbar .cart_List li,
+.Leftbar .menu_List li{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5em 0.7em;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.Rightbar .cart_List li svg,
+.Leftbar .menu_List li svg{
+  fill: #fff;
+  flex-shrink: 0;
+  margin-right: 1em;
+}
+
+.Rightbar .cart_List .cart_List_text .cart_List_subtext{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Rightbar .cart_List .cart_List_text h3{
+  font-size: 0.7em;
+  width: 100%;
+}
+
+.cart_List .cart_empty p{
+  font-size: 1em;
+  text-align: center;
+}
+
+.Rightbar .cart_List .cart_List_text .cart_List_subtext p{
+  font-size: 0.5em;
+  padding: 0;
+}
+
+.Leftbar .menu_List{
+  margin-top: 3em;
+}
+
+.Leftbar .menu_List li{
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1.5em;
+}
+
+.Leftbar .menu_List h3{
+  font-size: 1em;
+  font-weight: 300;
+}
+
+/* --------Hero--------- */
+
 .Hero_subtext{
-  margin-top: 20em;
+  margin-top: 25em;
 }
 
 .Hero_subtext h2 {
-  font-family: Roboto;
-  font-weight: 200;
-  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  color: #dadada;
   font-size: 4em;
   text-align: center;
   animation: fadewithtransform 500ms ease-in;
 }
+
 @keyframes fadewithtransform{
   from{
     transform: translateX(-2em);
@@ -277,14 +383,15 @@ body {
 }
 
 .Hero_subtext button h3 {
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 2em;
 }
 
 
 .Hero_subtext h3 {
-  font-family: Poppins;
-  font-size: 1em;
+  font-family: Poppins, sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
 }
 
 .Hero_subtext h3 span {
@@ -332,39 +439,4 @@ body {
 
 .Option-box {
   text-align: center;
-}
-
-.scroller {
-  position: absolute;
-  bottom: 0.5em;
-  width: 100vw;
-}
-
-.overlay {
-  border-radius: 20px;
-  margin: 0 auto;
-  width: 95vw;
-  height: 4em;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 500ms ease;
-}
-
-.overlay:hover {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.overlay:hover svg path {
-  fill: rgba(228, 228, 228, 0.938);
-}
-
-.overlay svg {
-  width: 20px;
-  height: auto;
-  transition: all 500ms ease;
-}
-
-.overlay svg path {
-  fill: rgba(49, 49, 49, 0.938);
 }
